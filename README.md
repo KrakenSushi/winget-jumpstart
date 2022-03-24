@@ -19,13 +19,13 @@ git clone https://github.com/KrakenSushi/winget-jumpstart.git
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
-* To revert the changes of running scripts on your system, run this command at an elevated PowerShell window.
+* To disable running scripts on your system, run this command at an elevated PowerShell window.
 ```powershell
 Set-ExecutionPolicy Restricted
 ```
 <br>
 
-## Usage
+## Opening
 
 * Using command line<br>
 ```sh
@@ -35,11 +35,11 @@ Set-ExecutionPolicy Restricted
 * Using File Explorer<br>
 ![Open](img/open.gif)
 
-## Selecting Programs to install 
+## Selecting programs to install 
 
 * The list of programs to install is under the function `InstallProgs`, modify it to your needs. 
   ![List](img/list.png)
-* Search for package using
+* Search for package names using:
   * [winget.run](https://winget.run/) 
   * Using the command line
 ```cmd
