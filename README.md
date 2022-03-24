@@ -12,7 +12,7 @@ This PowerShell script is made for newly installed instances of Windows. This sc
 ```zsh
 git clone https://github.com/KrakenSushi/winget-jumpstart.git
 ``` 
-* Update `App Installer` first before auto installing programs by using the Microsoft Store or manually downloading it with this script and installing it.<br><br>
+* Update `App Installer` first by using the Microsoft Store or manually downloading it with this script and installing it.<br><br>
   
  ### Enable running scipts on your Windows system<br><br>
 * Run an elevated PowerShell window.
