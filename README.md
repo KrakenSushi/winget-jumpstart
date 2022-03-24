@@ -2,7 +2,7 @@
 # Winget Jumpstart
 
 
-This PowerShell script is made for newly installed instances of Windows.
+This PowerShell script is made for newly installed instances of Windows. This script automatically downloads and installs the programs that are selected by the user.
 
 <br>
 
@@ -45,3 +45,11 @@ Set-ExecutionPolicy Restricted
 ```cmd
 winget search <program_name> 
 ```
+<br>
+
+## Credits
+* Microsoft 
+  * Windows
+  * PowerShell
+  * WinGet 
+  
