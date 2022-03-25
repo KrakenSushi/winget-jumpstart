@@ -35,15 +35,14 @@ Function mainMenu
     }
 Function InstallWinGet
     {
-        Clear-Host
-        Write-Output "Downloading WinGet"
-	Write-Output "Downloaded size is about 21XXXXXX"
+    Clear-Host
+    Write-Output "Downloading WinGet"
+	Write-Output "Downloaded size is about 21000000 Bytes"
         #Download WinGet package from Microsoft servers
             wget https://aka.ms/getwinget -O ~/Desktop/WinGet.msixbundle
-        Write-Output "WinGet has been downloaded on your Desktop `n Please install it by double clicking on it"
-	Write-Output "Please Wait for its dependencies to download"
-	Write-Output "Delete the WinGet package aftter successful installation"
-        Read-Host -Prompt "Press any key to return to the main menu"
+    Clear-Host
+    Write-Output "WinGet has been downloaded on your Desktop. Please install it by double clicking on it, `nwait for its dependencies to download."
+        pause
 	Clear-Host
         #Go back to main menu
             mainMenu
@@ -51,9 +50,16 @@ Function InstallWinGet
 
 Function InstallProgs
     {
+        #Remove winget.msixbundle
+        $wingetPkg="~/Desktop/WinGet.msixbundle"
+        if(Test-Path $wingetPkg) 
+            {
+                Remove-Item $wingetPkg
+            }
         Clear-Host
         Write-Output "Installing Selected Programs"
-        #Modify this list to suit your needs
+        #Modify this list to suit your needs 
+        #Search for package names at https://winget.run/
             winget install Valve.Steam
             winget install google.chrome
             winget install Videolan.VLC
@@ -75,9 +81,12 @@ Function InstallProgs
             # Use Virtualbox if needed
             #winget install Oracle.Virtualbox
 
+            # Uncomment if you need OBS
+            #winget install OBSProject.OBSStudio
+
         Write-Output "Check the programs have been installed"
-        Read-Host -Prompt "Press any key to continue..."
-	Clear-Host
+        pause
+	    Clear-Host
         #Go back to main menu
             mainMenu
     }

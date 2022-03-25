@@ -2,28 +2,46 @@
 # Winget Jumpstart
 
 
-This Powershell script is made for newly installed instances of Windows
+This PowerShell script is made for newly installed instances of Windows.
 
-## Usage
+<br>
 
+## Requirements
 
-* Clone or download this repo as zip
+* Clone or download the script  from this repo.
 ```zsh
 git clone https://github.com/KrakenSushi/winget-jumpstart.git
 ``` 
-
-* Enable running scipts on your Windows system<br>
-* Run an elevated PowerShell window
+* Update `App Installer` first before auto installing programs by using the Microsoft Store or manually downloading it with this script and installing it.<br><br>
+  
+ ### Enable running scipts on your Windows system<br><br>
+* Run an elevated PowerShell window.
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
-* Update `App Installer` first by using the Microsoft Store or manually downloading it with this script and installing it.
-* Execute the script<br>
-```sh
-./winget-jumpstart.ps1
-```
-* To revert the changes of running scripts on your system, run this command at an elevated PowerShell window
+* To revert the changes of running scripts on your system, run this command at an elevated PowerShell window.
 ```powershell
 Set-ExecutionPolicy Restricted
 ```
-### Done!
+<br>
+
+## Usage
+
+* Using command line<br>
+```sh
+./winget-jumpstart.ps1
+```
+
+* Using File Explorer<br>
+![Open](img/open.gif)
+
+## Selecting Programs to install 
+
+* The list of programs to install is under the function `InstallProgs`, modify it to your needs. 
+  ![List](img/list.png)
+* Search for package using
+  * [winget.run](https://winget.run/) 
+  * Using the command line
+```cmd
+winget search <program_name> 
+```
