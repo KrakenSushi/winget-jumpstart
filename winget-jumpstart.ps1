@@ -13,7 +13,8 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 Function mainMenu
     {
         Clear-Host
-        Write-Host " `nWinGet Jumpstart `n" -ForegroundColor Green 
+        Write-Host " `nWinGet Jumpstart" -ForegroundColor Green
+        Write-Host "Make sure that you've included the programs that you want to install  `n"
         Write-Host "Select Operation"
         Write-Host "1       - Install Programs" -ForegroundColor Yellow
         Write-Host "2       - Download WinGet" -ForegroundColor Yellow
@@ -72,6 +73,13 @@ Function InstallProgs
             winget install Microsoft.PowerToys
             winget install Notion.Notion
 
+            #Spotify (UWP Selected by default)
+                #UWP
+                winget install 9NCBCSZSJRSB
+
+                #Win32
+                #winget install Spotify.Spotify
+
             # Uncomment if you use gsudo
             #winget install gsudo
 
@@ -83,6 +91,12 @@ Function InstallProgs
 
             # Uncomment if you need OBS
             #winget install OBSProject.OBSStudio
+            
+            # Uncomment if you need Monitorian
+            #winget install 9NW33J738BL0
+
+            # Uncomment if you need Visual Studio Code
+            #winget install Microsoft.VisualStudioCode	
 
         Write-Output "Check the programs have been installed"
         pause
